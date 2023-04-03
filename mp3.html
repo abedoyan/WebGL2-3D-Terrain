@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://cs418.cs.illinois.edu/website/files/cs418-terrain.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Arda Bedoyan - Terrain</title>
+    <script src="math.js"></script>
+    <script src="scene-option-tree.js"></script><!-- handles controls -->
+    <script src="mp3_v6.js"></script>
+
+
+<script>// configures controls
+/**
+ * Modify this object to chose what options you want in the control pane.
+ * Top-level entries become top-section radio buttons.
+ * Nested entries become lower-section inputs of various types.
+ */
+var controlOptions =
+  {"terrain":
+    {"label":"Required: Faulting-method terrain"
+    ,"options":
+      {"resolution":{"type":"number","default":100,"label":" Grid Size"}
+      ,"slices":{"type":"number","default":100,"label":" Fractures"}
+      ,"shiny":{"type":"checkbox","default":false,"label":"Specular Lighting"}
+      ,"color":{"type":"checkbox","default":false,"label":"Height-Based Color"}
+      }
+    }
+    ,"uv_sphere":
+    {"label":"Optional: UV-Sphere"
+    ,"options":
+      {"rings":{"type":"number","default":100,"label":" Latitude Rings"}
+      ,"slices":{"type":"number","default":100,"label":" Longitude Slices"}
+      }
+    }
+  ,"torus": 
+    {"label":"Optional: Torus"
+    ,"options":
+      {"r1":{"type":"number","default":0.5,"label":" Inner Radius"}
+      ,"r2":{"type":"number","default":0.2,"label":" Outer Radius"}
+      ,"rings":{"type":"number","default":100,"label":" Number of rings"}
+      ,"points":{"type":"number","default":100,"label":" Points per ring"}
+      }
+    }
+  }
+</script>
+
+
+
+<!-- DO NOT MODIFY anything below this line -->
+<style>
+    body { margin: 0; border: none; padding: 0; display: flex; }
+    .controls {
+        width: min(50%, 20em); padding: 1em;
+        flex: 0 0 min(50%, 20em);
+    }
+    .controls label { display: block; }
+    .display {
+        flex-grow: 1; height: 100vh;
+        line-height: 0rem;
+    }
+</style>
+</head>
+<body style="margin: 0px;">
+    <div class="controls">
+        <form>
+        <div id="set1"></div>
+        <hr>
+        <div id="set2"></div>
+        <hr>
+        <input type="submit" value="Generate object">
+        </form>
+    </div>
+    <div class="display"><canvas width="928" height="608" style></canvas></div>
+
+
+</body></html>
