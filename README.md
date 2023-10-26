@@ -2,6 +2,12 @@
 
 This program creates 3D fractal terrain using the faulting method. It uses diffuse Lambert lighting, in addition to specular Blinn-Phong lighting. There is also a setting to chose to change the color of the terrain based on height. Additional options, allow the creation of UV spheres and toruses.
 
+
+
+https://github.com/abedoyan/WebGL2-3D-Terrain/assets/111945641/4aa7b394-72eb-459e-a320-0fad1a6133c5
+
+
+
 ![image](https://user-images.githubusercontent.com/111945641/229456902-70889d77-ac4d-407c-b04d-e911a08f2502.png)
 
 
